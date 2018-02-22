@@ -4,27 +4,29 @@
     <meta charset="utf-8">
     <title>DXC Saba Online FAQ </title>
     <link rel="stylesheet" href="../resource/css/tab.css">
+    <link rel="shortcut icon" href="../resource/images/DXC.ico" />
 
     <link rel="stylesheet" href="../resource/css/main.css" type="text/css">
-    <script type="text/javascript" src="../resource/js/header.js"></script>    
+	    <link rel="stylesheet" href="../resource/css/clientlib-all.min.css" type="text/css">
+ <!--   <script type="text/javascript" src="../resource/js/header.js"></script>   --> 
     <script src='../resource/js/jquery.min.js' type='text/javascript'></script>
     
 
     <script>
         //Code Starts
         $(document).ready(function () {
-             var strTable = '<table width=100% border=1>'
+             var strTable = '<table width="100%" border="1px">'
             $.ajax({
                 type: "GET",
-                url: "https://raw.githubusercontent.com/poc-org/help/master/resource/include/QuestionAnswer.xml",
+                url: "https://raw.githubusercontent.com/lpenny22/help/master/resource/include/QuestionAnswer.xml",
                 dataType: "xml",
                 success: function (xml) {
                     var count = 1;
                     $(xml).find('FAQ').each(function () {                        
                         var strQuestion = $(this).attr('Question');
                         var strAnswer = $(this).attr('Answer');
-                        strTable += '<tr><td align="justify"><img src="../resource/images/yel_icon.jpg" alt="" style="width:auto; height:20px;" onClick="blabla('+count+')">' + strQuestion ;
-                        strTable += '<div id=' + count + ' style="padding-left:20px;display:none;">' + strAnswer + '</div></td></tr>';
+                        strTable += '<tr><td align="justify" style="display: block;"><p><br /><svg class="nc-icon nc-icon--play nc-icon--left" style="width:50; height:30px;"><use xlink:href="#icon-play" onClick="blabla(' + count + ')"></use></svg>' + strQuestion ;
+                        strTable += '<div id=' + count + ' style="padding-left:20px; padding-right:20px;display:none;">' + strAnswer +  '</p><br /></div></td></tr>';
                         $("#" + count + "").hide();
                         count++;
                     });
@@ -48,13 +50,26 @@
 
 </head>
 <body>  
+<!--
     <div class="tab" style="bottom:10px" >
         <button class="tablinks"  id="defaultOpen"></button>
     </div>
+-->	
     <script type="text/javascript" src="../resource/js/banner.js"></script>
-    <div id="divFAQ" style="padding-top:10px">
+    <div id="divFAQ" style="padding-top:0px">
+        <p><h2>Here are some of the most frequently asked<br />questions that employees have about DXC<br />University.</strong></font></h2>
     </div>  
     
+<!--Penny DXC Arrow START 2-14-18 Valentine -->
+    <svg style="width: 0px; height: 0px; overflow: hidden; position: absolute;" version="1.1">
+        <defs>
+            <symbol id="icon-play" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="100" fill="#ffed00" />
+                <polygon id="arrow" points="75,60 75,140 140,100" />
+            </symbol>
+        </defs>
+    </svg>
+
+<!--Penny DXC Arrow END -->	
 </body>
 </html>
-
