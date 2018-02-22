@@ -1,11 +1,6 @@
 // JScript source code
-var bannertext = '<div style="position: relative; top: 0px; left: 0px; padding-left: 0; background-color: #000000">'
-bannertext += '\n<div style="position:relative;top:10px;left:0px;padding-left:20;background-color:#000000" >'
-bannertext += '\n<img src="../resource/images/banner.jpg">'
+var bannertext = '<div style="margin:0 auto; width:700px;position: relative; top: 0px; left: 0px; padding-left: 0px; background-color: #000000">'
+bannertext += '\n<img src="https://raw.githubusercontent.com/lpenny22/help/master/resource/images/dxcuniversityhelpOrig2.jpg">'
 bannertext += '\n</div> '
-bannertext += '\n<div style="position:absolute;top:0px;left:0px;bottom:10px;padding-left:0;background-color:#000000">'
-bannertext += '\n<h2 style="color:white;"></h3>'
-bannertext += '\n</div>'
-bannertext += '\n</div>'
 document.write(bannertext);
 
