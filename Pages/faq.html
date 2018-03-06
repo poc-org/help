@@ -25,7 +25,7 @@
                     $(xml).find('FAQ').each(function () {                        
                         var strQuestion = $(this).attr('Question');
                         var strAnswer = $(this).attr('Answer');
-                        strTable += '<tr><td align="justify" style="display: block;"><p><br /><svg class="nc-icon nc-icon--play nc-icon--left" style="width:50; height:30px;"><use xlink:href="#icon-play" onmouseover="blabla(' + count + ')"></use></svg>' + strQuestion ;
+                        strTable += '<tr><td align="justify" style="display: block;"><p><br /><svg class="nc-icon nc-icon--play nc-icon--left" style="width:50; height:30px;"><use xlink:href="#icon-play" onmouseout="blabla(' + count + ')"></use></svg>' + strQuestion ;
                         strTable += '<div id=' + count + ' style="padding-left:20px; padding-right:20px;display:none;">' + strAnswer +  '</p><br /></div></td></tr>';
                         $("#" + count + "").hide();
                         count++;
